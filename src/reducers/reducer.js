@@ -47,55 +47,20 @@ const reducer = (state=initialState, action) => {
           chats:action.chats
         }     
 
-        case SELECTED_CHAT:
-            return {
+      case SELECTED_CHAT:
+          return {
               ...state,
               chat:action.chat
-            }
-         
-        case LIST_MESSAGE:
-              return {
-                  ...state,
-                  message:action.message
-              }
-            
-
-
-
-
-
-
-
-
-
-
-
-/*    
-    case RECEIVED_MESSAGE:
-        if(state.chat.chatid=action.chatid){
-          const messages=state.chat.message.concat({
-            name:action.name,
-            message:action.message
           }
-          
-          )
-
-          state.chat.message=messages;
-
+         
+      case LIST_MESSAGE:
           return {
-            ...state
-            }
-        
-        }
-      */   	
-    // return {
-    //     ...state,
-    //     items:state.items.push({id:action.items.itemId,item:action.items.item,completed:action.items.completed})
-    //   }
+              ...state,
+              message:action.message
+          }
     default:
       return state
   }
 }
-
 
 export default reducer;
